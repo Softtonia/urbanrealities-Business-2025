@@ -1,0 +1,17 @@
+.message-box-wraper p{
+    color: #000;
+text-align: center;
+font-family: "Poppins";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.message-box-wraper{
+    background-color: var(--lightGray);
+    padding: 20px 54px 80px 54px;
+    border-radius: 12px;
+}
+.message-box-wraper-col{
+    padding: 100px 10px;
+}

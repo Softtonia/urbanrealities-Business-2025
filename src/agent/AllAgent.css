@@ -1,0 +1,401 @@
+.all-agent-listing-search-wraper .sticky-header input{
+    border: none;
+    outline: none;
+    background-color: var(--lightGray);
+    padding:8px  22px;
+  }
+  .all-agent-listing-search-wraper .sticky-header{
+    border-radius: 80px;
+    overflow: hidden;
+    align-items: center;
+  }
+  .all-agent-listing-search-wraper{
+    background-color: var(--lightGray);
+  }
+  .all-agent-listing-search-wraper h1{
+    font-size: 14px ;
+    font-family: Poppins;
+    font-weight: 600;
+  }
+  .all-agent-listing-search-wraper .admin-dashboard{
+    padding: 0 55px;
+    border-left: 1px solid var(--gray);
+  }
+  .all-agent-listing-search-wraper .purpose-header{
+    background-color: var(--white);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .all-agent-listing-search-wraper .listing-wraper{
+    line-height: 48px;
+    background-color: var(--white);
+    padding: 0 20px;
+   border-radius: 5px;
+  }
+  .all-agent-listing-search-wraper .listing-wraper strong {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--black);
+  }
+  .all-agent-listing-search-wraper .listing-wraper p{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--orange);
+    cursor: pointer !important;
+  }
+  
+  .all-agent-listing-search-wraper  .add-property-content-wraper{
+    background-color: var(--white);
+    border-radius: 5px ;
+  }
+  .all-agent-listing-search-wraper  .add-property-h-wraper h2{
+    font-size: 16px;
+    margin: 0 ;
+  }
+  .all-agent-listing-search-wraper  .add-property-h-wraper {
+    padding: 14px 26px;
+    border-bottom: 1px solid #737b8b77  ;
+  }
+  .all-agent-listing-search-wraper  .add-purpose-form input ,.add-purpose-form select{
+   border: none;
+   outline: none;
+   border: 1px solid #C5C9D1 ;
+   width: 100%;
+   border-radius: 12px;
+   padding: 8px 20px;
+  }
+  .all-agent-listing-search-wraper  .add-purpose-form label{
+    color: var(--black);
+    font-size: 15px ;
+    font-family: Poppins;
+    font-weight: 500;
+    margin:15px 0 8px 0;
+  }
+  .all-agent-listing-search-wraper .add-purpose-form {
+    padding: 0 26px ;
+  }
+  .all-agent-listing-search-wraper  .add-purpose-form  select{
+    font-size: 14px ;
+    font-family: Poppins !important;
+    font-weight: 400;
+    color: #504F4F  ;
+  }
+  .all-agent-listing-search-wraper  .add-purpose-form input::placeholder{
+    font-size: 14px ;
+    font-family: Poppins !important;
+    font-weight: 500 !important;
+    color: #504F4F !important ;
+  }
+  .all-agent-listing-search-wraper  .action-dropdown-wraper select{
+    font-size: 14px ;
+    font-family: Poppins !important;
+    font-weight: 400;
+    color: #504F4F  ;
+    background-color: transparent;
+  }
+  .all-agent-listing-search-wraper  .action-dropdown-wraper{
+    padding: 0;
+  }
+  .all-agent-listing-search-wraper  .apply-btn-wraper{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border: 1px solid #C5C9D1  ;
+    background-color: transparent;
+    margin-left: 8px;
+  }
+  .all-agent-listing-search-wraper  .apply-btn-wraper span{
+    font-size: 14px ;
+    font-family: Poppins !important;
+    font-weight: 400 !important;
+  }
+  .all-agent-listing-search-wraper  .search-content-wraper input{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 80%;
+  }
+  .all-agent-listing-search-wraper  .search-content-wraper button{
+    background-color: var(--orange);
+    border: none;
+    outline: none;
+    width: 20%;
+  }
+  .all-agent-listing-search-wraper  .search-content-wraper{
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    width: 306px;
+  }
+  
+  .all-agent-listing-search-wraper  .add-property-row {
+    padding: 26px;
+  }
+  .all-agent-listing-search-wraper  .add-propery-active-wraper{
+    padding: 26px 26px 0 26px;
+  }
+  .all-agent-listing-search-wraper  .form-select{
+    padding: 10px 20px;
+  }
+  .all-agent-listing-search-wraper  .right-section-wraper{
+    background-color: var(--white);
+    padding:26px;
+    border-radius: 5px ;
+  }
+  .right-purpose-col{
+  }
+  .all-agent-listing-search-wraper  .edit-purpose-table-wraper{
+    padding-top: 30px !important;
+  }
+  .all-agent-listing-search-wraper  .edit-purpose-table-wraper th{
+    font-size: 14px ;
+    font-family: Poppins ;
+    font-weight: 500 ;
+  }
+  .all-agent-listing-search-wraper  .edit-purpose-table-wraper p{
+    margin-left: 20px !important;
+  }
+ 
+  .all-agent-listing-search-wraper  .file-uploading-wraper{
+    width: 215px;
+    height: 86px;
+  }
+  .all-agent-listing-search-wraper  .all-agent-listing-search-wraper input[type="file"]{
+    width: 100%;
+    height: 100%;
+  }
+  .all-agent-listing-search-wraper  .upload-icon-wraper{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+  }
+  .all-agent-listing-search-wraper  .apply-button-wraper button{
+   padding: 10px 20px;
+   border: none;
+   outline: none;
+   background-color: var(--orange);
+   border-radius: 5px;
+   margin-top: 35px;
+  }
+  .all-agent-listing-search-wraper  .apply-button-wraper button span{
+    font-size: 16px ;
+    font-family: Poppins ;
+    font-weight: 500 ;
+    line-height: 24px;
+    color: var(--white);
+  }
+  .all-agent-listing-search-wraper  .dropdown-act-wraper{
+    width:148px;
+  }
+  .all-agent-listing-search-wraper  .edit-del-btn-wraper button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-right: 10px ;
+  }
+ 
+  .all-agent-listing-search-wraper tr ,.all-agent-listing-search-wraper th ,.all-agent-listing-search-wraper td{
+    border: none;
+  }
+  
+  .all-agent-listing-search-wraper #col-id:nth-child(odd){
+    background-color: var(--lightGray);
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin; /* Set the width of the scrollbar for Firefox */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.table-responsive::-webkit-scrollbar { 
+  width: 1px; /* Adjust the width of the scrollbar */ 
+} 
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: var(--orange); 
+}
+.table-responsive {
+  scrollbar-color: var(--orange) var(--lightGray);
+}
+
+
+  table thead th{
+    width: 5% !important;
+  }
+  .custom-table {
+    max-width: 600px; /* Adjust the value according to your needs */
+  }
+  .all-agent-listing-search-wraper th ,  .all-agent-listing-search-wraper td{
+    padding: 13px;
+  }
+  td{
+    font-family: Poppins;
+    font-weight: 400;
+    color: var(--black) !important;
+  }
+  .bg-green{
+    background-color: #37D159    ;
+    border: none;
+    outline: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+  .bg-green span{
+    color: var(--white);
+    font-family: Poppins ;
+    font-weight: 500 ;
+    font-size: 14px;
+  }
+  .light-green{
+    background-color:#61AE68    ;
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: Poppins ;
+    font-weight: 500 ;
+    font-size: 14px;
+  }
+  .light-blue{
+    background-color:#2B98D6;
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: Poppins ;
+    font-weight: 500 ;
+    font-size: 14px; 
+  }
+  .light-orange{
+    background-color:#F07E7E;
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: Poppins ;
+    font-weight: 500 ;
+    font-size: 14px; 
+  }
+
+  .yellow{
+    background-color:#FF9F0F;
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: Poppins ;
+    font-weight: 500 ;
+    font-size: 14px; 
+  }
+  .purple{
+    background-color:#6F62C2;
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: Poppins ;
+    font-weight: 500 ;
+    font-size: 14px; 
+  }
+  .blue{
+    background-color: #3B4CB8;
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: Poppins ;
+    font-weight: 500 ;
+    font-size: 14px; 
+  }
+  .all-agent-listing-search-wraper-right-section{
+    padding: 20px;
+  }
+  .all-agent-listing-search-wraper-right-section .add-agent-btn{
+    border: none;
+    outline: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    background-color: var(--orange);
+  }
+  .all-agent-listing-search-wraper-right-section .add-agent-btn span{
+    font-family: Poppins ;
+    font-weight: 500 ;
+    font-size: 14px; 
+    color: var(--white);
+  }
+  .all-agent-listing-search-wraper .agent-search-bar{
+    position: relative;
+    width: 350px !important;
+  }
+  .all-agent-listing-search-wraper .agent-search-bar input {
+    
+    padding: 8px 14px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--gray);
+    width: 100%;
+  }
+  .all-agent-listing-search-wraper .agent-search-data{
+    background-color: var(--white);
+    max-height: 200px;
+    position: absolute;
+    top: 42px;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+  }
+  .all-agent-listing-search-wraper .send-request-agent-btn{
+    border: none;
+    background-color: transparent;
+    border-radius:5px ;
+  }
+  .all-agent-listing-search-wraper .send-request-agent-btn span{
+    font-family: Poppins ;
+    font-weight: 400 ;
+    font-size: 14px; 
+    color: var(--orange);
+  }
+  
+  .all-agent-listing-search-wraper .accepted span{
+    color: var(--success);
+  }
+  @media only screen and (max-width: 1315px){
+    .all-agent-listing-search-wraper .right-section-wraper{
+      margin-top: 30px;
+    }
+    .all-agent-listing-search-wraper .search-content-wraper {
+      width: 106px;
+  }
+  .all-agent-listing-search-wraper .action-dropdown-wraper{
+    flex-wrap: wrap;
+  }
+  }
+  @media only screen and (max-width: 968px){
+    .all-agent-listing-search-wraper .search-content-wraper {
+      width: 206px;
+  }
+  }
+  @media only screen and (max-width: 720px){
+    .all-agent-listing-search-wraper .search-content-wraper {
+     margin-top: 30px;
+     width: 100%;
+  }
+  .action-parent{
+    width: 100% !important;
+  }
+  .all-agent-listing-search-wraper .dropdown-act-wraper {
+    width: 80%;
+  }
+  .edit-del-btn-wraper{
+    width: 80px;
+  }
+  
+  
+  
+  }

@@ -1,0 +1,8 @@
+export const API_KEY = 'https://api.urbanrealities.com/public'
+export const API_TOKEN = 'AdminyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3OCIsIm5hbWUiOiJK'
+export const WEB_URL = 'http://localhost:5175'
+export const WEBSITE_WEB_URL = 'http://localhost:3000'
+export const X_CLIENT_ID = 'ZAYYL8IQDWCRAAZ'
+export const X_CLIENT_SECRET = 'EGFFBPEYXGDHP5R'
+export const X_APP_TYPE = 'business'
+export const VITE_TINY_API_KEY = 'vq888jqt06ioc5iufl0jj11xw2z372suw1g16wr60owswq11'

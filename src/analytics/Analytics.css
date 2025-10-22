@@ -1,0 +1,141 @@
+.analytics-listing-search-wraper .right-analytics-section{
+    background-color: var(--white);
+    padding: 20px;
+}
+
+.total-appointments-heading{
+    font-family: "Poppins";
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.appointment-dashboard-chart{
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+
+
+
+
+
+.my-analytics-wrape-2-col-10 {
+    width: 85.333333%;
+    background-color: var(--white);
+    padding: 20px;
+    flex-grow: 1;
+    border-radius: 12px;
+}
+.css-1oqqzyl-MuiContainer-root{
+    padding: 0 !important;
+}
+.total-rent-analytics-wraper{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--success);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total-rent-analytics-wraper p{
+    color: var(--gray);
+    /* Reg,400 */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.total-rent-analytics-wraper h3{
+    color:var(--black);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.total-scales-analytics-wraper{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.property-project-chart{
+    border: 1px solid var(--borderLine);
+    padding: 15px;
+    border-radius: 12px;
+}
+.growth-chart-analytics{
+    border: 1px solid var(--borderLine);
+    padding: 15px;
+    border-radius: 12px;
+}
+.analytics-pie-chart-wraper{
+    border: 1px solid var(--borderLine);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+}
+.ticket-progress-analytics-chart{
+   
+    padding: 20px;
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+}
+.total-active-ticket-progress-analytics_1{
+    background-color: var(--success);
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total-active-ticket-progress-analytics_2{
+    background-color: var(--orange);
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total-counter-total-active-ticket-progress{
+    width: 131px ;
+    margin: auto;
+    margin-top: 30px;
+}
+.total-counter-total-active-ticket-progress h3{
+    color: var(--black);
+
+/* Text 1, Reg, 400 */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.total-counter-total-active-ticket-progress p span{
+    color: var(--gray);
+
+/* Text 1, Reg, 400 */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.chart-container-inner-content{
+    border: 1px solid var(--borderLine);
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}

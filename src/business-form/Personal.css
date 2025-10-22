@@ -1,0 +1,104 @@
+.personal-info-wrape-2 {
+    margin-top: 110px;
+}
+
+.personal-info-right-section {
+    background-color: var(--white);
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+}
+
+.personal-info-right-section .personal-info-active-wraper h1 {
+    color: #2E2B2B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+.business-next-btn{
+    margin-right: 10px;
+}
+
+.personal-info-right-section .personal-info-active-wraper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+
+.active-heading {
+    color: var(--orange) !important;
+}
+
+.personal-info-form-wraper {
+    margin-top: 30px !important;
+}
+
+.personal-info-form-wraper h2 {
+    color: var(--orange);
+
+    /* H3,Medium,500 */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+.personal-info-form-wraper label {
+    display: block;
+    color: var(--black);
+
+    /* Mobile Form label */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.personal-info-form-wraper input {
+    width: 100%;
+    border: 1px solid var(--borderLine);
+    padding: 8px 20px;
+    border-radius: 12px;
+    margin-top: 7px;
+}
+
+.personal-info-form {
+    margin-top: 40px;
+}
+
+.personal-info-col {
+    margin-bottom: 30px;
+}
+
+.personal-info-form-btn button {
+    border: none;
+    outline: none;
+    background-color: var(--orange);
+    padding: 8.75px 14px;
+    border-radius: 5px;
+}
+
+.personal-info-form-btn button span {
+    color: var(--white);
+
+    /* Mobile Form label */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.personal-info-form-btn {
+    display: flex;
+    justify-content: end;
+}
+
+.personal-info-discard-btn {
+    margin-right: 30px;
+}

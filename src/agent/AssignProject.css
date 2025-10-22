@@ -1,0 +1,41 @@
+.assign-project-search-wraper-right-section {
+    background-color: var(--white);
+    padding: 20px;
+}
+.assign-project-table-wraper td , .assign-project-table-wraper th{
+    padding: 15px 12px;
+}
+
+
+.assign-project-table-wraper #col-id:nth-child(odd) {
+    background-color: var(--lightGray) !important;
+}
+.view-assign-project-wraper{
+    border: none;
+    outline: none;
+    margin-right: 5px;
+}
+.action-dropdown-manage-project-wraper .apply-btn-wraper{
+    margin-left: 5px !important;
+    padding: 9px 18px;
+    border: none;
+    outline: none;
+    border:  1px solid var(--borderLine);
+    background-color: transparent;
+    border-radius: 5px;
+}
+.assign-to-button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--black);
+}
+.add-manage-project{
+    border: none;
+    outline: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    font-family: "Poppins";
+    color: var(--white);
+}

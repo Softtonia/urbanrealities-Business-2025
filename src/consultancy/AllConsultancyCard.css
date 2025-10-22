@@ -1,0 +1,84 @@
+.all-consultancy-card-wraper{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+}
+.all-consultancy-card-logo{
+    width: 150px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+.all-consultancy-card-profile{
+    display: flex;
+    align-items: center;
+}
+.all-consultancy-card-profile p{
+    color: var(--black);
+    margin: 0;
+    font-size: 12.25px;
+    text-transform: capitalize;
+}
+.all-consultancy-card-profile h3{
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-transform: capitalize;
+} 
+.all-consultancy-card-description p{
+    color: var(--black);
+    font-size: 10.5px;
+    text-transform: capitalize;
+}
+.all-consultancy-card-description{
+    margin-bottom: 14px;
+}
+.all-consultancy-card-list-group{
+    margin: 0 -20px;
+    margin-bottom: 14px;
+}
+.all-consultancy-card-list-group li{
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--borderLine);
+}
+.all-consultancy-card-tittle{
+    color: var(--gray);
+    font-family: "poppins";
+    margin-right: 10px;
+    font-size: 12.25px;
+}
+.all-consultancy-card-value{
+    color: var(--black);
+    font-family: "Poppins";
+    font-size: 12.25px;
+}
+.text-capatilize{
+    text-transform: capitalize;
+}
+.all-consultancy-card-view{
+    border: none;
+    outline: none;
+    padding: 5px 14px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-family: "Poppins";
+    border-radius: 5px;
+}
+.all-consultancy-card-developer p span{
+    color: var(--gray);
+}
+.all-consultancy-card-btn-wraper{
+    display: flex;
+    justify-content: space-between;
+}
+.all-consultancy-card-assign {
+    border: none;
+    outline: none;
+    padding: 5px 14px;
+    background-color: var(--green);
+    color: var(--white);
+    font-family: "Poppins";
+    border-radius: 5px;
+}

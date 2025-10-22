@@ -1,0 +1,61 @@
+.add-agent-right-section{
+    background-color: var(--white);
+    padding: 30px;
+}
+.add-agent-listing-search-wraper input , .add-agent-listing-search-wraper select{
+    width: 95%;
+    border: none;
+    outline: none;
+    border: 1px solid var(--gray);
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-family: Poppins;
+    font-weight: 400;
+    margin-top: 7px;
+}
+
+.add-agent-listing-search-wraper label{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+}
+.submit-button{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    margin-right: 26px;
+    margin-top: 30px;
+}
+
+.submit-button span{
+    color: var(--white);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.cancel-button{
+    border: none;
+    outline: none;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px 20px;
+}
+.cancel-button span{
+    color: var(--orange);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+.add-agent-listing-search-wraper .add-agent-form-col{
+    margin-top: 26px;
+}

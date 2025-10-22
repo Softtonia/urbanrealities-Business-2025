@@ -1,0 +1,291 @@
+.left-navbar-wraper{
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--borderLine);
+}
+.left-navbar-wraper li{
+    padding:10px 30px;
+}
+.left-navbar-wraper li p{
+    margin-top: 10px;
+    color:  #2E2B2B ;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.wrape-2-nav-common-wp{
+    margin-top: 110px;
+}
+.business-dashboard-right-section{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--borderLine);
+}
+.business-dashboard-content-wrape h2{
+    color: var(--orange);
+/* Btn */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.business-dashboard-content-wrape h3{
+    color: var(--Card-Font, #2E2B2B);
+
+/* Btn */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.business-dashboard-content-wrape p span{
+    color:var(--green);
+
+/* Btn */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.business-dashboard-content-wrape .left-img{
+    border-radius: 20px;
+}
+.dashboard-right-content h2{
+    color:var(--black);
+
+/* Button */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.dashboard-right-content p{
+    color: var(--gray);
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+margin-left: 5px;
+}
+.business-dashboard-insight-view-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid var(--borderLine);
+}
+.business-dashboard-insight-view-btn button{
+    border: none;
+    outline: none;
+    background-color: var(--orange);
+    padding: 8.75px 14px;
+    border-radius: 100px;
+}
+.business-dashboard-insight-view-btn button span{
+    color: var(--white);
+
+/* Btn Desk... 12 */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.dashboard-left-col{
+    border-right: 1px solid var(--borderLine);
+}
+.dashboard-right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.business-dashboard-wrape-2{
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+.business-created-wraper p{
+   color: var(--gray);
+}
+.business-dashboard-right-section .business-activity-wraper{
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+}
+.business-activity-heading-wraper{
+    background-color: var(--borderLine);
+    margin-top: 20px;
+    background-color: var(--white);
+    padding: 20px 15px;
+    margin-bottom: 20px;
+
+}
+.business-activity-heading-wraper h1{
+    color: var(--black);
+
+/* Text 2 Mob, Med500 */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.business-activity-h3-wraper{
+    color:var(--black);
+
+/* Btn */
+font-family: Poppins;
+font-size:14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.business-activity-h4-wraper{
+    color: var(--orange);
+
+/* Btn */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.business-activity-btn1{
+    border: none;
+    outline: none;
+    background-color: var(--lightGray);
+    padding: 2px 12px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+.business-activity-btn1 span{
+    color: var(--Card-Font, #2E2B2B);
+
+/* Button */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+line-height: 2.5;
+}
+.business-activity-btn2{
+    border: none;
+    outline: none;
+    background-color: var(--orange);
+    padding: 2px 12px;
+    border-radius: 100px;
+}
+.business-activity-btn2 span{
+    color: var(--white);
+
+/* Button */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 2.5;
+
+}
+.business-activity-wraper{
+    background-color: var(--lightGray);
+}
+.business-activity-col-2{
+    background-color: var(--white);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+}
+.business-activity-rw{
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+.business-activity-col{
+    background-color: var(--white);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.header-col-2{
+    width: 155px;
+}
+.right-flex-grow{
+    flex-grow: 1;
+}
+.circular-progress{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.circular-progress-text{
+    color:var(--black);
+
+/* Btn Desk... 12 */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.my-account-loader{
+    height: 100vh;
+}
+@media screen and (max-width: 768px) {
+    .dashboard-left-col{
+        border-right: 0 !important;
+    }
+    .mb-none{
+        display: none;
+    }
+    .business-created-wraper p{
+        font-size: 10px;
+        margin-top: 15px;
+    }
+    .mb-col-none{
+        display: none;
+    }
+    
+  }
+  @media screen and (max-width: 600px){
+    .view-business-dashboard{
+        display: flex;
+        justify-content: space-between;
+    }
+    .view-business-dashboard-row{
+        padding: 0 !important;
+    }
+    .view-business-dashboard-row-col{
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        display: none;
+    }
+    .view-business-dashboard-row h3 , .view-business-dashboard-row p{
+        margin: 0;
+    }
+    .dashboard-left-col p{
+       margin: 0;
+    }
+    .business-created-wraper p{
+        margin: ;
+    }
+  }
+  @media screen and (max-width: 968px){
+    .view-business-dashboard-row-col{
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        display: none;}
+  }
+
+ 

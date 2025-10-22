@@ -1,0 +1,290 @@
+.agent-view-right-section-wraper{
+    padding: 20px;
+    /* background-color: var(--whi  te); */
+    border-radius: 12px;
+    /* border: 1px solid var(--borderLine); */
+    flex-grow: 1;
+}
+.agent-view-right-section-wraper .agent-view-profile-wraper{
+    background-color: var(--lightGray);
+    border-radius: 12px;
+    border: 1px solid var(--borderLine);
+    padding: 10px;
+}
+.agent-view-profile-wraper p strong{
+color: var(--black);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.agent-view-inner-contact-info-wp{
+    background-color: var(--white);
+    padding: 20px 30px;
+    border: 1px solid var(--borderLine);
+    border-radius: 0px 0px 12px 12px;
+}
+.agent-view-inner-contact-info-wp h3{
+color: var(--black);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.agent-view-profile-right-section h2{
+ color: var(--black);
+
+/* H3,Medium,500 */
+font-family: "Poppins";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 0;
+padding: 13px 23px;
+}
+.agent-view-profile-right-section{
+    /* padding: 20px; */
+}
+.agent-view-profile-right-section p{
+    padding: 13px 13px;
+    color: var(--gray);
+}
+.agent-view-right-section-bio-wrapes{
+    padding: 0 10px;
+}
+.agent-view-right-section2-wraper{
+    padding: 20px 25px;
+}
+.agent-view-profile-right-section p strong{
+    color: var(--black);
+}
+.agent-view-profile-right-section h4{
+    color:var(--black);
+
+/* Btn */
+font-family: "Poppins" !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+
+}
+.agent-view-profile-right-section h4 span{
+    margin-right: 10px;
+}
+.agent-view-profile-right-section h5{
+    margin: 0;
+    color:  #2E2B2B;
+
+/* Btn */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.agent-view-profile-right-section .agent-view-right-col-4{
+ margin-bottom: 10px;
+}
+.agent-view-progress-bar{
+    background-color: var(--lightGray);
+    padding: 21px 29px 21px 30px;
+    border-radius: 12px;
+    border: 1px solid var(--borderLine);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.agent-view-file-wrape-2 h2{
+color: var(--black);
+font-family: "Poppins";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: 20px 20px;
+margin: 0;
+}
+.agent-view-file-wrape-2 hr{
+    margin: 0;
+    margin-bottom: 30px;
+}
+.agent-view-folder-svg-wp{
+    width: 55px;
+    height: 55px;
+    border: 1px solid var(--green) ;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.9;
+    background-color: #EDF8E2;
+}
+.agent-view-folder-wp{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+    padding: 30px 0;
+}
+.agent-view-gallery-svg-wp{
+    width: 55px;
+    height: 55px;
+    border: 1px solid var(--orange) ;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3.2;
+    background-color: #FFEFE7;
+}
+.agent-view-d2-folder-svg-wp{
+    width: 55px;
+    height: 55px;
+    border: 1px solid #1125D2 ;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3.2;
+    background-color:#F5F6FF;
+}
+.agent-view-create-file-btn-wp button{
+    border: none;
+    outline: none;
+    background-color: var(--orange);
+    padding: 8.75px 14px;
+    border-radius: 100px;
+}
+.agent-view-create-file-btn-wp button span{
+ color: var(--white);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.agent-view-other-file-wrape-2 h2{
+color: var(--black);
+font-family: "Poppins";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: 20px 20px;
+margin: 0;
+}
+.agent-view-other-file-wrape-2 hr{
+    margin: 0;
+    margin-bottom: 30px;
+}
+.agent-view-other-file-svg{
+    width: 24px;
+    height: 24px;
+}
+.agent-view-other-file-svg-wp h3{
+    color: var(--piny-tree);
+
+/* Text 1, Reg, 400 */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+}
+.agent-view-other-file-svg-wp{
+    display: flex;
+    border: 1px solid var(--borderLine);
+    padding: 10px 0;
+    justify-content: space-evenly;
+    border-radius: 12px;
+    background-color: var(--lightGray);
+    margin-bottom: 30px;
+}
+svg{
+    cursor: pointer;
+}
+.document-profile-logo-wrapers{
+    background-color: var(--orange);
+    padding: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.document-inner-contact-info-wp li{
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 21px;
+    border-bottom: 1px solid var(--borderLine);
+    margin: 0 -30px !important;
+}
+.document-inner-contact-info-wp li:last-child{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 14px 21px; */
+    border:none;
+    margin: 0 -30px !important;
+    padding-bottom: 0px;
+}
+.document-inner-contact-title{
+    color: var(--gray);
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 12.25px;
+}
+.document-inner-contact-value{
+    color: var(--black);
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 12.25px;
+}
+.agent-view-file-about-wp{
+    background-color: var(--white);
+    padding-bottom: 12px;
+    box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgba(82, 63, 105, 0.05);
+    border-radius: 12px;
+}
+.agent-view-my-file-other-file-section{
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0rem 0.3125rem 0.3125rem 0rem rgba(82, 63, 105, 0.05);
+}
+.agent-view-my-file-section , .agent-view-other-file-section{
+    padding: 0 26px;
+}
+.agent-view-right-about-grid-cnt{
+    padding: 0 13px;
+}
+.agent-view-right-grid-content-view{
+    border-bottom: 1px solid var(--borderLine); 
+    padding: 8px 0;
+}
+.agent-view-right-col-4{
+    /* padding: 13px 0; */
+    /* border-bottom: 1px solid var(--borderLine); */
+}
+@media screen and (max-width: 768px) {
+    .header-col-2 {
+        display: none;
+    }
+    .agent-view-profile-right-section .agent-view-right-col-4{
+        margin: 0;
+        padding: 0 38px;
+        margin-bottom: 15px;
+    }
+    .agent-view-right-section-wraper .agent-view-profile-wraper{
+        margin-bottom: 30px;
+    }
+    .agent-view-create-file-btn-wp button{
+        margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 980px){
+    .header-col-2{
+        width: 130px;
+    }
+    .left-navbar-wraper li{
+        padding: 10px 20px;
+    }
+    .left-navbar-wraper li p{
+        font-size: 12px;
+    }
+  }

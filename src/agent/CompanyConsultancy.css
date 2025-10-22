@@ -1,0 +1,156 @@
+/* .my-account-wrape-1 h1{
+    color: var(--black);
+    font-family: "Mona Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 50px;
+} */
+
+.company-consultancy-project ul{
+    display: flex;
+}
+.company-consultancy-project ul li{
+    border: none;
+    outline: none;
+    padding: 8.75px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--gray);
+    margin-right: 24px;
+}
+
+.company-consultancy-project{
+    padding: 0 12px;
+}
+.my-account-wrape-2 ul label , .myy-acc-btn-listing a{
+color: var(--black) !important;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.my-consultancy-cpmpany-wp-2-slider h2{
+    color: var(--green);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.my-consultancy-cpmpany-wp-2-slider p{
+    color: var(--pine-tree);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+    margin-top: 6px;
+}
+.my-consultancy-cpmpany-wp-2-slider p span{
+    color: var(--orange);
+    margin-left: 12px;
+}
+.my-consultancy-cpmpany-wp-2-slider hr{
+    margin: 1px 0;
+    border: 1px solid var(--borderLine);
+}
+.my-consultancy-cpmpany-wp-2-slider{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.my-company-consultancy-view-link-wp-2 a{
+    color: #1125D2 !important;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.my-company-consultancy-view-link-wp-2{
+    border: none !important;
+    padding: 0 !important;
+}
+.my-company-consultancy-manage-wp-2 a{
+    color: var(--orange) !important;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+.my-company-consultancy-manage-wp-2{
+    border: none !important;
+    padding: 0 !important;
+}
+.myy-consultancy-company-manager-wp{
+    justify-content: space-between;
+    margin-top: 12px !important;
+}
+.mt-20{
+    margin-top: 30px;
+}
+.my-account-consultancy-rt-col-wp-2{
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+    border: 1px solid var(--borderLine);
+    overflow: hidden;
+}
+
+.my-account-wrape-2-col-2{
+    max-width: 12.666667%;
+    margin-right: 20px;
+}
+.w-148{
+    width: 120px;
+}
+.my-acc-search-buy-wp{
+    width: 235px;
+}
+.my-acc-locality-wp{
+    width:125px;
+}
+.my-acc-budget-wp{
+    width: 80px;
+}
+.my-acc-pt-wp{
+    width: 130px;
+}
+.my-acc-bhk-wp{
+    width: 60px;
+}
+.my-acc-posted-wp{
+    width: 100px;
+}
+.my-acc-filter-wp{
+    width: 130px;
+}
+.myy-acc-btn-listing{
+    overflow: hidden;
+    overflow-x: auto;
+}
+.myy-acc-btn-listing::-webkit-scrollbar {
+    display: none;
+}
+
+.company-consultancy-status-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-color: var(--orange);
+    position: absolute;
+    top: 11px;
+    left: 0;
+    padding: 1px 10px;
+}
+.company-consultancy-status-btn span{
+    color: var(--white);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

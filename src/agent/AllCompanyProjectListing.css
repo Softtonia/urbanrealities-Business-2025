@@ -1,0 +1,189 @@
+
+.app-dv-4-info-mb-btn button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 8.75px 12px;
+    border: 1px solid var(--orange);
+    border-radius: 100px;
+}
+.app-dv-4-info-mb-btn{
+    display: none !important;
+}
+
+.app-dv-4-lft h2{
+    color: var(--green);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.app-dv-4-lft p{
+    color: var(--pine-tree) !important;
+}
+.app-dv-4-lft strong{
+    color: #191919;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 10px;
+}
+.app-dv-4-info-mb-btn  button:nth-child(2){
+    background-color: var(--orange) !important;
+}
+.app-dv-4-info-mb-btn  button:nth-child(2) span{
+    color: var(--white);
+}
+.app-dv-4-lft p span{
+    color: var(--orange);
+    margin-left: 10px;
+}
+.app-dv-4-lft p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+.Ap-reviews-txt{
+    color: #191919; 
+font-family:"Poppins";
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.app-dv-4-lft hr{
+    margin: 0;
+    border: 1px solid var(--gray);
+    margin-bottom: 10px;
+}
+.app-dv-4-lft-btn-wp button:nth-child(1){
+    padding: 8.75px 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--orange);
+    display: block;
+}
+.app-dv-4-lft-btn-wp button:nth-child(1) span{
+    color: var(--orange);
+    text-align: justify;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.app-dv-4-lft-btn-wp button:nth-child(2){
+    padding: 8.75px 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background-color: var(--orange);
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+.app-dv-4-lft-img img{
+    height: 100%  !important;
+}
+.app-dv-4-lft-slider-wp{
+    background-color: var(--white);
+    margin-bottom: 30px;
+}
+.app-dv-4-lft-slider-wp h2{
+    color: var(--green);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.app4-col-gray-wp{
+    background-color: var(--lightGray);
+}
+.App-div4{
+    margin-top: 30px;
+} 
+.app-dv-4-right{
+    background-color: var(--white);
+    padding: 0 20px;
+}
+.app-dv-4-right h3{
+    color:var(--black);
+/* H3,Medium,500 */
+font-family: "Poppins";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border-bottom: 1px solid var(--orange);
+display: inline-block;
+margin-top: 31px;
+}
+.app-dv-4-right-card{
+    background-color: var(--lightGray);
+    padding: 10px 10px 34px 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.app-dv-4-right-card h4{
+    color: var(--black);
+
+/* Text2, Medium, 500 */
+font-family: "Poppins";
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.app-dv-4-right-card h5{
+    color: var(--black);
+font-family: "Poppins";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.app-dv-4-right-card-wraper {
+    height: 800px;
+}
+.overflow-y-auto{
+    overflow-y: auto !important;
+}
+
+.app-dv-4-right-card h6{
+    color:var(--green);
+font-family: "Poppins";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.app-dv-4-lft-btn-wp button:nth-child(2) span{
+    color: var(--white);
+}
+.Ap-reviews-short-box-txt{
+    color: var(--Text, #333);
+font-family:"Poppins";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.span-divider-label{
+    display: inline-block;
+        width: 1px;
+        height: 17px;
+        background-color:var(--borderLine);
+        margin: 0 8px;
+}
+.border-company-project{
+    border: 1px solid var(--borderLine);
+    border-radius: 5px;
+    overflow: hidden;
+}

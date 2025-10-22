@@ -1,0 +1,336 @@
+.ticket-right-section{
+    background-color: var(--white);
+    border: 1px solid var(--borderLine);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+}
+.ticket-right-section h1{
+    margin: 0;
+    padding-bottom: 20px 0;
+}
+.ticket-right-section .ticket-circular-progress-wraper{
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+    /* padding: 23px 0; */
+    margin-top: 20px;
+}
+.ticket-right-section .ticket-circular-progress-wraper h2{
+    color: #000;
+
+/* Desktop H2, Bold, 600 */
+font-family: Poppins;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 0;
+}
+.ticket-total-svg-img1{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: var(--green);
+    text-align: center;
+   
+}
+.ticket-total-svg-img1-paragraph{
+color: var(--black);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+}
+.ticket-total-svg-img1-paragraph2{
+    color: var(--gray);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+}
+.ticket-total-svg-wp{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7px;
+}
+.strong-ticket-heading-section{
+color: var(--black);
+font-family: "Poppins";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+margin: 0;
+margin-bottom: 7px;
+margin-top: 10px;
+}
+.ticket-svg-wp-col-3{
+    border-left: 1px solid var(--borderLine);
+    border-right: 1px solid var(--borderLine);
+}
+.text-gray{
+    color: var(--gray);
+}
+
+.ticket-total-svg-img2{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--blue);
+}
+.ticket-table-cnt th{
+color: var(--black);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.resolved-btn-ticket-wp{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-color: var(--success);
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+.resolved-btn-ticket-wp span{
+color: var(--white);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.closed-btn-ticket-wp{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-color: #F07E7E;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+.closed-btn-ticket-wp span{
+    color: var(--white);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.ticket-table-cnt tbody tr:nth-child(odd) {
+    background-color:var(--lightGray)
+}
+.ticket-table-cnt tr{
+    border-style: none;
+    border: none;
+    border-color: transparent;
+}
+.ticket-right-section-wraper{
+    flex-grow: 1;
+}
+.ticket-table-cnt{
+    margin-top: 20px;
+}
+.ticket-table-cnt td{
+color:var(--black);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.ticket-table-cnt tr:hover{
+    cursor: pointer;
+}
+.ticket-modal{
+    height: 100%;
+    width: 700px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ticket-modal {
+    position: fixed;
+    top: 82px;
+    right: -100%; /* Initially off-screen */
+    width: 800px;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease; /* Slide animation */
+    border-left: 1px solid var(--Border-Line, #EBECF0);
+    overflow: hidden;
+    overflow-y: auto;
+    padding-bottom: 150px;
+  }
+  
+  .slide-in {
+    right: 0; /* Slide in from the right */
+  }
+  
+  .slide-out {
+    right: -100%; /* Slide out to the right */
+  }
+  .close-ticket-model{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% ;
+    background-color: var(--orange);
+    color: var(--white);
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .ticket-model-paragraph-wp{
+    padding-right: 67px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  .ticket-model-environment-detail1 h2{
+    color:var(--black);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+  .ticket-model-environment-detail1 {
+    padding: 0 20px;
+  }
+  .ticket-model-environment-detail1-content-wp{
+    background-color: var(--lightGray);
+    border-radius:12px;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  .ticket-model-environment-detail1-content-col{
+    border-right: 1px solid var(--borderLine) !important;
+    margin-bottom: 10px;
+  }
+  .ticket-model-environment-detail1-content-col p{
+    margin: 0;
+    color: var(--gray);
+  }
+  .ticket-model-right-col{
+    padding: 30px 17px 30px 20px;
+    border-left: 1px solid var(--borderLine);
+  }
+  .ticket-model-right-col h2{
+ color: var(--black);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-bottom: 10px;
+  }
+  .ticket-model-right-col p {
+    color: var(--gray);
+  }
+  .ticket-model-right-col p strong{
+    color:  #2E2B2B;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+  .ticket-model-assign-wp , .ticket-model-other-info-wp{
+    border-top: 1px solid var(--borderLine);
+    border-bottom: 1px solid var(--borderLine);
+    padding: 20px 0;
+  }
+  .ticket-model-assign-wp span{
+    color: var(--orange);
+  }
+  .ticket-model-other-info-wp .high-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 86px;
+    text-align: center;
+    background: #EFB0B0;
+    padding: 4px 0;
+  }
+  .ticket-model-other-info-wp .high-btn span{
+    color: #E40E0E;
+
+/* Btn */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+  .ticket-model-other-info-wp .low-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 86px;
+    text-align: center;
+    background: #D6EBC9;
+    padding: 4px 0;
+  }
+  .ticket-model-other-info-wp .low-btn span{
+    color: var(--green);
+  }
+  .ticket-model-other-info-wp .medium-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 86px;
+    text-align: center;
+    background: #F6CBB5;
+    padding: 4px 0;
+  }
+  .ticket-model-other-info-wp .medium-btn span{
+    color: var(--orange);
+  }
+  .ticket-progress-buttons-wraper .process-btn{
+    border: none;
+    outline: none;
+    background-color: #F1ED97;
+    width: 100%;
+    padding: 8.75px 0;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  .ticket-progress-buttons-wraper .process-btn span{
+    color: #AE9D42;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .ticket-progress-buttons-wraper .escalate-btn{
+    border: none;
+    outline: none;
+    background-color:var(--orange);
+    width: 100%;
+    padding: 8.75px 0;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  .ticket-progress-buttons-wraper .escalate-btn span{
+    color: var(--white);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+ 

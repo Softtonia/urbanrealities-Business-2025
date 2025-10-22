@@ -1,0 +1,131 @@
+.my-project-view-detail-wrape-2-col-10{
+    padding: 20px;
+}
+.my-project-view-detail-wrape-2-cnt{
+    /* background-color: var(--white); */
+    padding: 20px;
+}
+.my-project-view-detail-sale-counter{
+    background-color: var(--orange);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.my-project-view-detail-sale-counter h1{
+    font-family: "Poppins";
+    font-weight: 500;
+    color: var(--white);
+    font-size: 26px;
+}
+.my-project-view-detail-sale-counter p{
+    font-family: "Poppins";
+    font-weight: 400;
+    color: var(--white);
+}
+.my-project-view-detail-profile{
+    background-color: var(--white);
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+}
+.my-project-view-detail-profile-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: auto;
+}
+.my-project-view-detail-profile h2{
+    font-size: 17px;
+    font-weight: 500;
+    padding: 15px 0;
+    margin: 0;
+}
+.my-project-view-detail-profile p span{
+    color: var(--gray);
+}
+.my-project-view-detail-contect-wraper{
+    border: 1px solid  var(--borderLine);
+    padding: 10px 0;
+    border-radius: 12px;
+    margin-top: 28px;
+}
+
+
+ 
+.my-project-view-detail-type-btn{
+    border: none;
+    outline: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    font-family: "Poppins";
+    font-weight: 400;
+    color: var(--white);
+    margin-top: 20px;
+    display: block;
+}  
+.my-project-view-detail-type-cnt h2{
+    font-size: 21px;
+}
+.my-project-view-detail-type-cnt{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.my-project-view-detail-type-cnt p strong{
+    color: var(--orange) !important;
+    font-size: 18px;
+    font-weight: 500;
+}
+.manage-view-detail-description p{
+    color: var(--gray);
+}
+.my-project-view-detail-bstp-slider{
+    border-radius: 12px;
+}
+.my-project-view-detail-property-feature-wraper{
+    background-color: var(--white);
+    padding: 22px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+.my-project-view-detail-property-feature-wraper p{
+    margin: 0;
+}
+.my-project-view-detail-property-feature-wraper .property-feature-grid-content{
+    padding: 15px 12px;
+}
+.my-project-view-detail-property-feature-wraper h3{
+    margin: 0;
+    padding-bottom: 20px;
+}
+.manage-view-detail-description h3{
+    padding-bottom: 20px;
+}
+.my-project-view-detail-bstp-slider .carousel-inner{
+    height: 500px;
+}
+.my-project-view-detail-property-location{
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+.my-project-view-detail-property-map{
+    width: 100%;
+    height: 350px;
+}
+.my-project-view-detail-property-map iframe{
+    width: 100%;
+    height: 100%;
+}
+.text-capatilize{
+    text-transform: capitalize !important;
+}
+.my-project-view-detail-property-card{
+    padding: 20px;
+}

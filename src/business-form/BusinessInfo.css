@@ -1,0 +1,120 @@
+.business-info-wrape-2 {
+    margin-top: 110px;
+}
+
+.business-info-right-section {
+    background-color: var(--white);
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+}
+
+.business-info-right-section .business-info-active-wraper h1 {
+    color: #2E2B2B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+.business-info-right-section .business-info-active-wraper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+
+.required {
+    color: red;
+}
+
+.active-heading {
+    color: var(--orange) !important;
+}
+
+.business-info-form-wraper {
+    margin-top: 30px !important;
+}
+
+.business-info-form-wraper h2 {
+    color: var(--orange);
+
+    /* H3,Medium,500 */
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+.business-info-form-wraper label {
+    display: block;
+    color: var(--black);
+
+    /* Mobile Form label */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.business-info-form-wraper input {
+    width: 100%;
+    border: 1px solid var(--borderLine);
+    padding: 8px 20px;
+    border-radius: 12px;
+    margin-top: 7px;
+}
+.business-info-form-wraper textarea {
+    width: 100%;
+    border: 1px solid var(--borderLine);
+    padding: 8px 20px;
+    border-radius: 12px;
+    margin-top: 7px;
+}
+.business-info-form {
+    margin-top: 40px;
+}
+
+.business-info-col {
+    margin-bottom: 30px;
+}
+
+.business-info-form-btn button {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--orange);
+    padding: 8.75px 14px;
+    border-radius: 5px;
+}
+
+.spinner-col {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.business-info-form-btn button span {
+    color: var(--white);
+
+    /* Mobile Form label */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.business-info-form-btn {
+    display: flex;
+    justify-content: end;
+    margin-right:10px ;
+}
+
+.business-info-discard-btn {
+    margin-right: 30px;
+}

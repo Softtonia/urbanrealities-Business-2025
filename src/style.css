@@ -1,0 +1,201 @@
+
+
+*,::before,::after{ margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box;}
+a{ text-decoration: none;}
+ul{ list-style: none; padding: 0;}
+button{ cursor: pointer; padding: 0;}
+img{ vertical-align: bottom;}
+:disabled{ cursor: not-allowed;}
+iframe{ border: none;}
+label{ display: inline-block;}
+.flex{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-flow: row wrap;flex-flow: row wrap;}
+.align-center{-webkit-box-align: center;-ms-flex-align: center;align-items: center;}
+.space-evenly{-webkit-box-pack: space-evenly;-ms-flex-pack: space-evenly;justify-content: space-evenly;}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../FONT/Poppins-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../FONT/Poppins-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../FONT/Poppins-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../FONT/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+::-moz-selection{background-color: black;color: white;}
+::selection{background-color: black;color: white;}
+:root{
+    font-size: 15px;
+    --black:#222;
+    --white: #FFF ;
+    --orange: #FB6A18;
+    --green : #3D8B0D;
+    --gray :  #9E9E9E;
+    --lightGray : #F8F8F8;
+    --lightBold :#808080;
+    --borderLine :  #C5C9D1;
+    --lightGray :  #F5F5F5;
+    --blue:#1125D2;
+    --success:#37D159;
+    --bs-table-bg: transparent !important;
+    --piny-tree: #2E2B2B
+}
+.view-btn{
+    background-color: var(--success);
+    padding: 5px 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.view-btn span{
+    color: var(--white);
+}
+h2{
+    font-size: 2rem;
+    font-family: Poppins;
+    font-weight: 600;
+}
+.container{
+    max-width: 1500px !important;
+}
+.orange{
+    color:var(--orange) !important;
+}
+h3{
+    font-size: 18px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+p{
+    font-size: 14px;
+}
+h1{
+    font-size: 24px;
+    font-family: Poppins !important;
+    font-weight: 600;
+    font-style: normal;
+}
+a{
+    font-family: Poppins;
+    font-style: normal;
+    cursor: pointer;
+}
+p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+.table{
+    --bs-table-bg : transparent
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: var(--black); 
+     background-color: transparent !important; 
+     border-color: transparent !important; 
+}
+.btn:hover {
+    color: var(--black);
+    background-color: transparent;
+    border-color: transparent;
+}
+body{
+    background-color: var(--lightGray);
+}
+/* .dropdown-toggle-wrapper a{
+color: var(--black);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 30px !important;
+} */
+
+
+/* Style the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Style the dropdown button */
+  .dropdown-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .border-none{
+    border-bottom: 0px !important;
+  }
+  .d-block{
+    display: block !important;
+  }
+  .btn {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Optionally, you can also remove the active color */
+  .btn:active,
+  .btn.active {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+  }
+
+.pagination-btn{
+    border: none !important;
+    outline: none !important;
+    width: 24px;
+height: 24px;
+padding: 6px 7px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+color: var(--black);
+background: transparent;
+border-radius: 5px;
+border: 1px solid var(--gray) !important;
+background: #FFF;
+margin: auto 5px;
+}
+
+.active-pagination-btn{
+    background-color: var(--orange);
+    color: var(--white);
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.pagination-list{
+    border-radius: 20px !important;
+}
+.pagination-list{
+    margin-top: 31px;
+}
+.disabled{
+    color: var(--lightGray) !important;
+}
+
+.error-text{
+    color: red;
+    font-size: 13px;
+    text-transform: capitalize;
+}

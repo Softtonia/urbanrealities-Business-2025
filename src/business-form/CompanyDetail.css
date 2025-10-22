@@ -1,0 +1,87 @@
+.company-detail-wrape-2{
+    margin-top: 110px;
+}
+.company-detail-right-section{
+    background-color: var(--white);
+    border: 1px solid var(--borderLine);
+    border-radius: 12px;
+}
+.company-detail-right-section .company-detail-active-wraper h1{
+    color:  #2E2B2B;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+.company-detail-right-section .company-detail-active-wraper{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+.active-heading{
+    color: var(--orange) !important;
+}
+.company-detail-form-wraper{
+    margin-top: 30px !important;
+}
+.company-detail-form-wraper h2{
+    color: var(--orange);
+
+/* H3,Medium,500 */
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 0;
+}
+.company-detail-form-wraper label{
+    display: block;
+    color:var(--black);
+
+/* Mobile Form label */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.company-detail-form-wraper  input{
+    width: 100%;
+    border: 1px solid var(--borderLine);
+    padding: 8px 20px;
+    border-radius: 12px;
+    margin-top: 7px;
+}
+.company-detail-form{
+    margin-top: 40px;
+}
+.company-detail-col{
+    margin-bottom: 30px;
+}
+.company-detail-form-btn button{
+    border: none;
+    outline: none;
+    background-color: var(--orange);
+    padding: 8.75px 14px;
+    border-radius: 5px;
+}
+.company-detail-form-btn button span{
+    color: var(--white);
+
+/* Mobile Form label */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.company-detail-form-btn{
+    display: flex;
+    justify-content: end;
+}
+.company-detail-discard-btn{
+    margin-right: 30px;
+}
