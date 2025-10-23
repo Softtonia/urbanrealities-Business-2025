@@ -49,6 +49,8 @@ import { API_KEY, X_APP_TYPE, X_CLIENT_ID, X_CLIENT_SECRET } from "./config";
 import DeveloperList from './developer/DeveloperList';
 import AddDeveloper from "./developer/AddDeveloper";
 import EditDeveloper from "./developer/EditDeveloper";
+import Profile from "./my-profile/Profile";
+import LeadList from "./lead/LeadList";
 
 
 
@@ -177,11 +179,20 @@ function App() {
             />
             {
               <Route
-                path="/my-account/my-profile/:id"
+                path="/my-account/edit-profile/:id"
                 element={privateRoute ? <MyProfile /> : <Navigate to="/login" />}
               />
             }
-
+            {
+              <Route
+                path="/my-account/my-profile/:id"
+                element={privateRoute ? <Profile /> : <Navigate to="/login" />}
+              />
+            }
+            <Route
+              path="/my-account/lead"
+              element={privateRoute ? <LeadList /> : <Navigate to="/login" />}
+            />
             <Route
               path="/my-account/agent"
               element={privateRoute ? <AllAgent /> : <Navigate to="/login" />}
@@ -214,7 +225,7 @@ function App() {
               path="/my-account/edit-project/:id"
               element={privateRoute ? <EditProject /> : <Navigate to="/login" />}
             />
-             <Route
+            <Route
               path="/my-account/all-developer"
               element={privateRoute ? <DeveloperList /> : <Navigate to="/login" />}
             />
@@ -289,10 +300,10 @@ function App() {
               element={
                 is_login
                   ? String(kyc) === "0"
-                  ? <BusinessInformation />
-                  : String(kyc) === "1"
-                    ? <PendingMessage />
-                    : String(kyc) === "2"
+                    ? <BusinessInformation />
+                    : String(kyc) === "1"
+                      ? <PendingMessage />
+                      : String(kyc) === "2"
                       && <BusinessDashboard />
                   : <Navigate to="/login" />
               }

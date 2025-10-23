@@ -6,13 +6,13 @@ import Layout from '../Layout/Layout';
 import LeftNavbar from '../Layout/LeftNavbar';
 import { toast } from 'react-toastify';
 import { FormControl, RadioGroup, FormControlLabel, Radio, Button } from '@mui/material';
-import { get, post } from '../Api/api';
+import { del, get, post } from '../Api/api';
 import view from '../../img/view.png';
 import edit from '../../img/edit.svg';
 import delete_img from '../../img/delete.svg';
-import './AllDeveloper.css';
+import './LeadList.css';
 
-const DeveloperList = () => {
+const LeadList = () => {
     const [data, setData] = useState([]);
     const [itemsPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
@@ -55,38 +55,38 @@ const DeveloperList = () => {
         }
     };
 
-    const handleBulkDelete = async () => {
-        if (bulkAction !== "delete") {
-            toast.warning("Please select a bulk action first.");
-            return;
-        }
-        if (selectedIds.length === 0) {
-            toast.warning("Please select at least one developer to delete.");
-            return;
-        }
-        const confirmMsg = window.confirm(
-            `Are you sure you want to delete ${selectedIds.length} developer(s)?`
-        );
-        if (!confirmMsg) return;
+    // const handleBulkDelete = async () => {
+    //     if (bulkAction !== "delete") {
+    //         toast.warning("Please select a bulk action first.");
+    //         return;
+    //     }
+    //     if (selectedIds.length === 0) {
+    //         toast.warning("Please select at least one developer to delete.");
+    //         return;
+    //     }
+    //     const confirmMsg = window.confirm(
+    //         `Are you sure you want to delete ${selectedIds.length} developer(s)?`
+    //     );
+    //     if (!confirmMsg) return;
 
-        try {
-            await post(`/api/developer-bulk-delete`, { id: selectedIds.join(",") });
-            toast.success("Selected developers deleted successfully!");
-            setData((prev) => prev.filter((item) => !selectedIds.includes(item.id)));
-            setSelectedIds([]);
-            setBulkAction("");
-        } catch (err) {
-            console.error(err);
-            toast.error("Error deleting selected developers.");
-        }
-    };
+    //     try {
+    //         await post(`/api/developer-bulk-delete`, { id: selectedIds.join(",") });
+    //         toast.success("Selected developers deleted successfully!");
+    //         setData((prev) => prev.filter((item) => !selectedIds.includes(item.id)));
+    //         setSelectedIds([]);
+    //         setBulkAction("");
+    //     } catch (err) {
+    //         console.error(err);
+    //         toast.error("Error deleting selected developers.");
+    //     }
+    // };
 
     const handleDelete = async (id) => {
         const confirmMsg = window.confirm('Are you sure to delete?');
         if (!confirmMsg) return;
 
         try {
-            await post(`/api/developer-delete`, { id });
+            await del(`/api/leads/${id}`);
             toast.success("Record deleted successfully!");
             setData((prev) => prev.filter((item) => item.id !== id));
         } catch (err) {
@@ -103,15 +103,15 @@ const DeveloperList = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await post("/api/update-developer-temporary-status", {
-                developer_id: projectId,
-                temporary_status: status
+            await post("/api/update-website-project-status", {
+                project_id: projectId,
+                project_status: status
             });
             toast.success("Status updated successfully!");
             setVisible(false);
             setData((prev) =>
                 prev.map((item) =>
-                    item.id === projectId ? { ...item, temporary_status: status === "active" ? "active" : "deactive" } : item
+                    item.id === projectId ? { ...item, project_status: status === "active" ? "1" : "0" } : item
                 )
             );
         } catch (err) {
@@ -123,8 +123,8 @@ const DeveloperList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await get(`/api/user-developer`);
-                if (response?.data?.message !== "Developer retrieved successfully.") {
+                const response = await get(`/api/get-assign-lead-to-user?user_id=${auth.id}`);
+                if (false) {
                     setData([]);
                 } else {
                     setData(response?.data?.data);
@@ -136,6 +136,8 @@ const DeveloperList = () => {
         };
         fetchData();
     }, [auth.token]);
+
+    console.log("data",data)
 
     return (
         <Layout>
@@ -153,23 +155,21 @@ const DeveloperList = () => {
                                                 <div className="dropdown-act-wraper">
                                                     <select
                                                         className="form-select form-select-lg"
-                                                        value={bulkAction}
-                                                        onChange={(e) => setBulkAction(e.target.value)}
+                                                        // value={bulkAction}
+                                                        // onChange={(e) => setBulkAction(e.target.value)}
                                                     >
                                                         <option value="">Bulk actions</option>
                                                         <option value="delete">Delete</option>
                                                     </select>
                                                 </div>
                                                 <div>
-                                                    <button className="apply-btn-wraper" onClick={handleBulkDelete}>
+                                                    <button className="apply-btn-wraper" 
+                                                    // onClick={handleBulkDelete}
+                                                    >
                                                         <span>Apply</span>
                                                     </button>
                                                 </div>
                                             </div>
-                                            {!(currentItems.length>0) && 
-                                            <Link to="/my-account/add-developer" className='apply-btn-wraper'>
-                                                <span>Add Developer</span>
-                                            </Link>}
                                         </div>
 
                                         {/* Table */}
@@ -187,8 +187,8 @@ const DeveloperList = () => {
                                                             </span>
                                                             <p className="m-0 d-inline">S.No</p>
                                                         </th>
-                                                        <th>Developer Id</th>
-                                                        <th>Status</th>
+                                                        <th>Email</th>
+                                                        <th>Message</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
@@ -205,19 +205,13 @@ const DeveloperList = () => {
                                                                 </span>
                                                                 <p className="m-0">{count++}</p>
                                                             </th>
-                                                            <td>{record.developer_unique_id}</td>
-                                                            <td>
-                                                                <button
-                                                                    className={record.temporary_status === "active" ? "active_view" : "deactivate_view bg-danger"}
-                                                                    onClick={() => handleModal(record.id)}
-                                                                >
-                                                                    {record.temporary_status === "active" ? 'Active' : "Inactive"}
-                                                                </button>
-                                                            </td>
+                                                            <td>{record.email}</td>
+                                                            <td>{record.message}</td>
+                                                           
                                                             <td>
                                                                 <div className="edit-del-btn-wraper">
-                                                                    <button onClick={() => nav('/my-account/edit-developer/' + record.id)}>
-                                                                        <img src={edit} alt="edit" />
+                                                                    <button onClick={() => nav('/my-account/view-lead/' + record.id)}>
+                                                                        <img src={view} alt="view" />
                                                                     </button>
                                                                     <button onClick={() => handleDelete(record.id)}>
                                                                         <img src={delete_img} alt="delete" />
@@ -262,7 +256,7 @@ const DeveloperList = () => {
                                                         <FormControl component="fieldset">
                                                             <RadioGroup aria-label="status" name="status" value={status} onChange={handleChange}>
                                                                 <FormControlLabel value="active" control={<Radio />} label="Active" />
-                                                                <FormControlLabel value="deactive" control={<Radio />} label="Inactive" />
+                                                                <FormControlLabel value="inactive" control={<Radio />} label="Inactive" />
                                                             </RadioGroup>
                                                             <Button type="submit" variant="contained" color="primary" className='my-3 submit-status-active-inactive-wraper'>
                                                                 Submit
@@ -284,4 +278,5 @@ const DeveloperList = () => {
     );
 };
 
-export default DeveloperList;
+
+export default LeadList

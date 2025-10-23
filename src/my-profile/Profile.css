@@ -1,0 +1,47 @@
+.profile-dropdown-myprofile {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.three-dot {
+     width: 100%;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    padding: 5px;
+    user-select: none;
+    text-transform: capitalize;
+}
+
+.dropdown-popup {
+    position: absolute;
+    top: 25px;
+    /* adjust depending on your layout */
+    right: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    min-width: 150px;
+}
+
+.dropdown-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-popup li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-popup li:hover {
+    background: #f1f1f1;
+}

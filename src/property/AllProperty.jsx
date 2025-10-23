@@ -1,285 +1,241 @@
-import React from 'react'
-import { API_KEY, API_TOKEN } from '../config';
-import { useState, useEffect, useContext } from "react";
-import { AuthContext } from '../context/MyStore';
+import React, { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/MyStore';
 import Layout from '../Layout/Layout';
 import LeftNavbar from '../Layout/LeftNavbar';
-import axios from 'axios';
-import './AllProperty.css'
-import view from '../../img/view.png'
-import edit from '../../img/edit.svg'
-import delete_img from '../../img/delete.svg'
 import { toast } from 'react-toastify';
-import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Button } from '@mui/material';
 import { get, post } from '../Api/api';
-
+import edit from '../../img/edit.svg';
+import delete_img from '../../img/delete.svg';
+import './AllProperty.css';
 
 const AllProperty = () => {
-    const [data, setData] = useState([]);
-    const [itemsPerPage] = useState(10); // You can adjust the number of items per page
-    const [currentPage, setCurrentPage] = useState(1);
-    const [load, setLoad] = useState(false);
-    const [visible, setvisible] = useState(false)
-    const [status, setStatus] = useState('active');
-    const [projectId, setProjectId] = useState('')
-    const handleChange = (event) => {
-        setStatus(event.target.value);
-    };
+  const [data, setData] = useState([]);
+  const [itemsPerPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [load, setLoad] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [status, setStatus] = useState('active');
+  const [projectId, setProjectId] = useState('');
+  const [selectedIds, setSelectedIds] = useState([]); // ✅ For bulk delete tracking
 
-    const { auth } = useContext(AuthContext)
-    const nav = useNavigate();
-    const [modal, setModal] = useState(false);
+  const { auth } = useContext(AuthContext);
+  const nav = useNavigate();
 
-    const [selectedOption, setSelectedOption] = useState(null);
+  // Pagination
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+  let count = (currentPage - 1) * itemsPerPage + 1;
 
-    console.log(data)
-
-    let count = (currentPage - 1) * itemsPerPage + 1;
-
-    // code for pagination
-    // Calculate pagination
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = data.length > 0 ? data.slice(indexOfFirstItem, indexOfLastItem) : [];
-
-    // Change page
-    const paginate = (pageNumber) => {
-        if (
-            pageNumber >= 1 &&
-            pageNumber <= Math.ceil(data.length / itemsPerPage)
-        ) {
-            setCurrentPage(pageNumber);
-        }
-    };
-
-    const HandleDelete = async (id) => {
-        console.log(id)
-        const confirmMsg = confirm('Are you sure to delete')
-        console.log(confirmMsg)
-        if (confirmMsg) {
-            // const instance = axios.create({
-            //   baseURL: `${API_KEY}`,
-            //   headers: {'api-token': auth.token}
-            // });
-            await post(`/api/delete-properties-listing`, { id })
-                .then(response => {
-                    console.log(response)
-                    toast.success('Record Deleted Successfuly!')
-                    setTimeout(() => {
-                        window.location.reload()
-                    }, 1000);
-                })
-                .catch(err => {
-                    console.log(err)
-                    alert(err.data.message)
-                })
-        }
-
+  const paginate = (pageNumber) => {
+    if (pageNumber >= 1 && pageNumber <= Math.ceil(data.length / itemsPerPage)) {
+      setCurrentPage(pageNumber);
     }
+  };
 
-    const handleModal = (id) => {
-        console.log(id)
-        setProjectId(id)
-        setvisible(true)
+  // ✅ Handle individual checkbox select/deselect
+  const handleCheckboxChange = (id) => {
+    setSelectedIds((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+
+  // ✅ Handle "Select All" checkbox
+  const handleSelectAll = (e) => {
+    if (e.target.checked) {
+      setSelectedIds(currentItems.map((item) => item.id));
+    } else {
+      setSelectedIds([]);
     }
+  };
 
-    // submit form here
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // const axiosInstance = axios.create({
-        //   baseURL: API_KEY,
-        //   headers: { "api-token": API_TOKEN },
-        // });
-        post("/api/update-website-project-status", {
-            project_id: projectId,
-            project_status: status
+  // ✅ Bulk delete function
+const [bulkAction, setBulkAction] = useState('');
+
+const handleBulkDelete = async () => {
+  if (bulkAction !== 'delete') {
+    toast.warning('Please select an action first.');
+    return;
+  }
+
+  if (selectedIds.length === 0) {
+    toast.warning('Please select at least one property to delete.');
+    return;
+  }
+
+  const confirmMsg = window.confirm(
+    `Are you sure you want to delete ${selectedIds.length} item(s)?`
+  );
+  if (!confirmMsg) return;
+
+  try {
+    // Convert selectedIds array to a comma-separated string
+    const ids = selectedIds.join(',');
+
+    await post(`/api/delete-properties-listing`, { id: ids });
+
+    toast.success('Selected properties deleted successfully!');
+setData((prev) => prev.filter((item) => !selectedIds.includes(item.id)));
+    setSelectedIds([]);
+    setBulkAction('');
+  } catch (err) {
+    console.error(err);
+    toast.error('Error deleting selected properties.');
+  }
+};
+
+  // Single delete (existing)
+  const HandleDelete = async (id) => {
+    const confirmMsg = confirm('Are you sure to delete this property?');
+    if (!confirmMsg) return;
+
+    try {
+      await post(`/api/delete-properties-listing`, { id });
+      toast.success('Record Deleted Successfully!');
+      setData((prev) => prev.filter((item) => item.id !== id));
+    } catch (err) {
+      console.log(err);
+      toast.error('Error deleting property.');
+    }
+  };
+
+  const handleModal = (id,status) => {
+    setStatus(status)
+    setProjectId(id);
+    setVisible(true);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await post("/api/update-temporary-status", {
+        property_id: projectId,
+        temporary_status: status,
+      });
+      toast.success("Updated Successfully!");
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // Fetch data
+  useEffect(() => {
+    const fetchData = async () => {
+      await get(`/api/get-all-properties-listing`)
+        .then((response) => {
+          setData(response?.data?.data || []);
+          setLoad(true);
         })
-            .then((response) => {
-                console.log(response);
-                alert("Updated Sussessfuly!");
-                window.location.reload();
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        .catch((err) => console.log(err));
     };
-    useEffect(() => {
-        let fetchData = async () => {
-            // const instance = axios.create({
-            //   baseURL: `${API_KEY}`,
-            //   headers: { "api-token": auth.token },
-            // });
-            await get(`/api/get-all-properties-listing`)
-                .then((response) => {
-                    console.log(response)
-                    setData(response?.data?.data)
-                    setLoad(true)
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
-        };
-        fetchData();
-    }, [auth.token]);
-    console.log("====================>", data)
-    return (
-        <Layout>
-            <div className="wrape-2-nav-common-wp all-project-listing-search-wraper">
-                <div className="container">
-                    <div className="row ">
-                        <LeftNavbar />
-                        <div className='col-10 flex-grow-1  '>
-                            <div className="row add-property-row">
-                                <div className="col-lg-12 col-md-12 col-sm-12 right-purpose-col">
-                                    <div className="right-section-wraper">
-                                        <div className="container action-dropdown-wraper d-flex justify-content-between">
-                                            <div className="d-flex action-parent">
-                                                <div className="dropdown-act-wraper">
-                                                    <select
-                                                        class="form-select form-select-lg "
-                                                        aria-label=".form-select-lg example"
-                                                    >
-                                                        <option selected>Bulk actions</option>
-                                                        <option value="delete">Delete</option>
-                                                    </select>
-                                                </div>
-                                                <div>
-                                                    <button className="apply-btn-wraper">
-                                                        <span>Apply</span>
-                                                    </button>
-                                                </div>
-                                            </div>
+    fetchData();
+  }, [auth.token]);
 
+  return (
+    <Layout>
+      <div className="wrape-2-nav-common-wp all-project-listing-search-wraper">
+        <div className="container">
+          <div className="row">
+            <LeftNavbar />
+            <div className="col-10 flex-grow-1">
+              <div className="row add-property-row">
+                <div className="col-lg-12 col-md-12 col-sm-12 right-purpose-col">
+                  <div className="right-section-wraper">
+                    <div className="container action-dropdown-wraper d-flex justify-content-between">
+                      <div className="d-flex action-parent">
+                        <div className="dropdown-act-wraper">
+  <select
+    className="form-select form-select-lg"
+    value={bulkAction}
+    onChange={(e) => setBulkAction(e.target.value)}
+  >
+    <option value="">Bulk Action</option>
+    <option value="delete">Delete</option>
+  </select>
+</div>
 
-                                            <Link to="/my-account/add-property" className='apply-btn-wraper'><span>Add Property</span></Link>
-                                        </div>
+<div>
+  <button className="apply-btn-wraper" onClick={handleBulkDelete}>
+    <span>Apply</span>
+  </button>
+</div>
 
-                                        {
-                                            // table start here
-                                        }
+                      </div>
+                      <Link to="/my-account/add-listing" className="apply-btn-wraper">
+                        <span>Add Property</span>
+                      </Link>
+                    </div>
 
-                                        <div className=" edit-purpose-table-wraper table-responsive ">
-                                            <table className="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col " className="id-col">
-                                                            <span>
-                                                                <input type="checkbox" />
-                                                            </span>
-                                                            <p className="m-0 d-inline">S.No</p>
-                                                        </th>
-                                                        {/* <th scope="col">Uniquie ID</th> */}
-                                                        <th scope="col"> Name</th>
-                                                        <th scope="col">Purpose</th>
-                                                        <th scope="col">Status</th>
-                                                        <th scope="col">Action</th>
-                                                    </tr>
+                    {/* Table */}
+                    <div className="edit-purpose-table-wraper table-responsive">
+                      <table className="table">
+                        <thead>
+                          <tr>
+                            <th>
+                              <input
+                                type="checkbox"
+                                onChange={handleSelectAll}
+                                checked={
+                                  currentItems.length > 0 &&
+                                  selectedIds.length === currentItems.length
+                                }
+                              />{" "}
+                              S.No
+                            </th>
+                            <th>Name</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {load &&
+                            currentItems.map((record, i) => (
+                              <tr key={record.id}>
+                                <td>
+                                  <input
+                                    type="checkbox"
+                                    checked={selectedIds.includes(record.id)}
+                                    onChange={() => handleCheckboxChange(record.id)}
+                                  />{" "}
+                                  {count++}
+                                </td>
+                                <td>{record.name}</td>
+                                <td>{record.purpose_id_name}</td>
+                                <td>
+                                  <button
+                                    className={
+                                      record.temporary_status === "active"
+                                        ? "active_view"
+                                        : "deactivate_view bg-danger"
+                                    }
+                                    onClick={() => handleModal(record.id,record.temporary_status)}
+                                  >
+                                    {record.temporary_status === "active"
+                                      ? "Active"
+                                      : "Inactive"}
+                                  </button>
+                                </td>
+                                <td>
+                                  <div className="edit-del-btn-wraper">
+                                    <button onClick={() => nav(`/my-account/edit-listing/${record.id}`)}>
+                                      <img src={edit} alt="edit" />
+                                    </button>
+                                    <button onClick={() => HandleDelete(record.id)}>
+                                      <img src={delete_img} alt="delete" />
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            ))}
+                        </tbody>
+                      </table>
+                    </div>
 
-                                                </thead>
-                                                <tbody>
-                                                    {
-                                                        load ? (
-                                                            currentItems.map((record, i) => (
-                                                                <tr id="col-id" key={i}>
-                                                                    <th scope="row" className="d-flex id-col">
-                                                                        <div style={{ width: "72px" }} className="d-flex">
-                                                                            <span>
-                                                                                <input type="checkbox" />
-                                                                            </span>
-                                                                            <p className="m-0">{count++}</p>
-                                                                        </div>
-                                                                    </th>
-                                                                    {/* <td>
-                                    <div style={{ width: "150px" }} className="d-flex">
-                                      {record.project_unique_id}
-                                    </div>
-                                  </td> */}
-                                                                    <td>
-                                                                        <div style={{ width: "150px" }} className="d-flex">
-                                                                            {record.name}
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div style={{ width: "150px" }} className="d-flex">
-                                                                            {record.purpose_id_name}
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div style={{ width: "150px" }} className="d-flex">
-                                                                            <button className={
-                                                                                record.project_status === "1"
-                                                                                    ? "active_view"
-                                                                                    :
-                                                                                    "deactivate_view bg-danger"
-                                                                            } onClick={() => handleModal(record.id)}>{record.project_status === "1" ? 'Active' : "InActive"}</button>
-                                                                        </div>
-                                                                    </td>
-
-
-                                                                    {
-                                                                        //     <td>
-                                                                        //     <div style={{ width: "174px" }} className="d-flex">
-                                                                        //     <button
-                                                                        //       onClick={() => {
-                                                                        //         setModal(true);
-                                                                        //         setFormData((prev) => ({
-                                                                        //           ...prev,
-                                                                        //           project_id: record.id,
-                                                                        //         }));
-                                                                        //       }}
-                                                                        //       className={
-                                                                        //         record.status === "approved"
-                                                                        //           ? "bg-green"
-                                                                        //           : record.status === "reject"
-                                                                        //           ? "bg-reject"
-                                                                        //           : record.status === "pending"
-                                                                        //           ? "bg-pending"
-                                                                        //           : ""
-                                                                        //       }
-                                                                        //     >
-                                                                        //       <span>{record.status}</span>
-                                                                        //     </button>
-                                                                        //   </div>
-                                                                        //     </td>
-                                                                    }
-
-                                                                    <td>
-                                                                        <div
-                                                                            className="edit-del-btn-wraper"
-
-                                                                        >
-                                                                            {
-                                                                                <>
-                                                                                    {
-                                                                                        //   <button >
-                                                                                        //   <img src={view} onClick={()=>HandleView(record.fullnamename,record.id)}/>
-                                                                                        // </button>
-                                                                                    }
-                                                                                    <button onClick={() => nav('/my-account/edit-property/' + record.id)} >
-                                                                                        <img src={edit} />
-                                                                                    </button>
-                                                                                    <button onClick={() => HandleDelete(record.id)} >
-                                                                                        <img src={delete_img} />
-                                                                                    </button>
-                                                                                </>
-
-                                                                            }
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            ))
-                                                        )
-                                                            :
-                                                            null
-
-
-                                                    }
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                        <div className="pagination d-flex justify-content-end">
+                    {/* Pagination */}
+                    <div className="pagination d-flex justify-content-end">
                                             <ul className="pagination-list d-flex">
                                                 <li
                                                     className={`pagination-item ${currentPage === 1 ? "disabled" : ""
@@ -326,48 +282,56 @@ const AllProperty = () => {
                                                     </button>
                                                 </li>
                                             </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
+      {/* Status modal */}
+      {visible && (
+        <div className="status-modal">
+          <div className="status-modal-form-wraper" style={{ position: "relative" }}>
+            <p className="text-center">Update status</p>
+            <button onClick={() => setVisible(false)} className="close-popup-status-modal">
+              X
+            </button>
+            <form onSubmit={handleSubmit}>
+              <div className="my-3">
+                <label>
+                  <input
+                    type="radio"
+                    name="status"
+                    value="active"
+                    checked={status === "active"}
+                    onChange={(e) => setStatus(e.target.value)}
+                  />
+                  Active
+                </label>
+                <label className="ms-3">
+                  <input
+                    type="radio"
+                    name="status"
+                    value="deactive"
+                    checked={status === "deactive"}
+                    onChange={(e) => setStatus(e.target.value)}
+                  />
+                  Inactive
+                </label>
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        </div>
+    )}
+    </Layout>
+  );
+};
 
-            {
-                // popup modal start here..
-                <div className={`status-modal ${visible ? ' ' : 'd-none'}`}>
-                    <div className='status-modal-form-wraper' style={{ position: 'relative' }}>
-                        <p className='text-center'>Update status</p>
-                        <button onClick={() => setvisible(false)} className='close-popup-status-modal'>X</button>
-                        <form onSubmit={handleSubmit}>
-                            <FormControl component="fieldset">
-                                <RadioGroup
-                                    aria-label="status"
-                                    name="status"
-                                    value={status}
-                                    onChange={handleChange}
-                                >
-                                    <FormControlLabel value="active" control={<Radio />} label="Active" />
-                                    <FormControlLabel value="inactive" control={<Radio />} label="Inactive" />
-                                </RadioGroup>
-                                <Button className='my-3 submit-status-active-inactive-wraper' type="submit" variant="contained" color="primary">
-                                    Submit
-                                </Button>
-                            </FormControl>
-
-                        </form>
-                    </div>
-                </div>
-            }
-
-        </Layout>
-    )
-}
-
-export default AllProperty
+export default AllProperty;
 
 
 

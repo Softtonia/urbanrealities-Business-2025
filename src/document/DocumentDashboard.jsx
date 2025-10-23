@@ -173,7 +173,7 @@ function DocumentDashboard() {
                   </div>
                 </div>
               </div>
-              <div className="document-file-wrape-2">
+              {/* <div className="document-file-wrape-2">
                 <h2>My Files</h2>
                 <div className="row">
                   <div className="col-lg-3 col-md-6 col-sm-12 mb-3 ">
@@ -378,7 +378,7 @@ function DocumentDashboard() {
                    </div>
                 </div>
                </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

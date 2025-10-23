@@ -567,7 +567,7 @@ const AddDeveloper = () => {
             newErrors.name_error = "**Please add Developer name**";
         }
         if (!formData2.description) {
-            newErrors.description_error = "**Please Add Property description**";
+            newErrors.description_error = "**Please Add Developer description**";
         }
 
         sortedCustomFields.forEach((field) => {
@@ -839,7 +839,7 @@ const AddDeveloper = () => {
             });
     }, []);
 
-  
+
 
 
 
@@ -1518,7 +1518,7 @@ const AddDeveloper = () => {
                                         name="street_address"
                                         value={formData2.street_address}
                                         onChange={handleChange2}
-                                        placeholder="Enter property Street Address"
+                                        placeholder="Enter Street Address"
                                     />
                                 </div>
                             </div>
@@ -1626,13 +1626,13 @@ const AddDeveloper = () => {
 
                             <div className="col-lg-12 col-md-12 col-sm-12 add-listing-form-col">
                                 <div className="custom-select">
-                                    <label>Property Name</label>
+                                    <label>Developer Name</label>
                                     <input
                                         type="text"
                                         name="name"
                                         value={formData2.name}
                                         onChange={handleChange2}
-                                        placeholder="Enter Property Name"
+                                        placeholder="Enter developer Name"
                                     />
                                     {errors.name_error && (
                                         <p className="errors-msg">{errors.name_error}</p>
@@ -1988,9 +1988,8 @@ const AddDeveloper = () => {
                                                         type="radio"
                                                         name={`field_value_${record.id}`} // Ensure unique name for each field group
                                                         value={option.value}
-                                                        onChange={
-                                                            (e) =>
-                                                                handleChange(e, record.id || record.custom_field_id, record.field_type)
+                                                        onChange={(e) =>
+                                                            handleChange(e, record.id, record.field_type)
                                                         }
                                                     />
                                                     {option.name}

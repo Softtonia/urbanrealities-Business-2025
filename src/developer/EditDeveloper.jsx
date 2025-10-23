@@ -1922,7 +1922,7 @@ const EditDeveloper = () => {
                     name="street_address"
                     value={formData2.street_address}
                     onChange={handleChange2}
-                    placeholder="Enter Property Street Address"
+                    placeholder="Enter Street Address"
                   />
                 </div>
               </div>
@@ -2031,13 +2031,13 @@ const EditDeveloper = () => {
 
               <div className="col-lg-12 col-md-12 col-sm-12 add-listing-form-col">
                 <div className="custom-select">
-                  <label>Property Name</label>
+                  <label>Developer Name</label>
                   <input
                     type="text"
                     name="name"
                     value={formData2.name}
                     onChange={handleChange2}
-                    placeholder="Enter Property Name"
+                    placeholder="Enter Developer Name"
                   />
                 </div>
               </div>
@@ -2685,7 +2685,7 @@ const EditDeveloper = () => {
               </div>
             ) : (
               <button className="add-property-send-btn mt-4">
-                <span>Submit Property</span>
+                <span>Submit</span>
               </button>
             )}
           </form>

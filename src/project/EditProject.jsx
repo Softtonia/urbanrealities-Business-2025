@@ -2535,7 +2535,7 @@ function EditProject() {
                             type="radio"
                             name={`field_value_${record.id}`}// Ensure unique name for each field group
                             value={option.value}
-                            defaultChecked={option.value === record.field_value}
+                            checked={option.value === record.field_value}
                             onChange={(e) =>
                               handleChange(e, record.id || record.custom_field_id, record.field_type)
                             }
